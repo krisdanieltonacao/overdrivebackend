@@ -46,3 +46,9 @@ module.exports.addParcel = (reqBody)=>{
             }
       })
 }
+
+// Search Tracking Number - OK
+module.exports.trackParcel = (reqBody)=>{
+      return Parcel.find({tracking_number: reqBody.tracking_number}).then(result=>result);
+}
+
